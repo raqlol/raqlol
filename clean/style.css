@@ -1,0 +1,30 @@
+body {
+  text-align:center;
+  background-color:#4C85AE;
+  color:white;
+  font-family:sans-serif;
+  letter-spacing:3px;
+}
+h1 {
+  font-size:72px;
+  line-height: 80px;
+}
+button {
+  color:#4C85AE;
+  font-weight: bold;
+  margin: 4px;
+  background-color: white;
+  padding: 10px;
+  border: none;
+  font-family: sans-serif;
+  letter-spacing: 2px;
+  font-size: 18px;
+}
+div {
+  margin-top: 40px;
+  line-height: 30px
+}
+div .chores {
+  text-align:left;
+  display:none;
+}

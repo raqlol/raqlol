@@ -1,0 +1,294 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>scifi repository</title>
+<<<<<<< HEAD
+<link href="/css/style.css" type="text/css" rel="stylesheet">
+=======
+<link href="css/style.css" type="text/css" rel="stylesheet">
+>>>>>>> bae4b3c0f58a669217fa543ce89a364cc4b428ce
+<script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script>$(document).ready(function() {
+  $('#categories li a').click(function() {
+    // fetch the class of the clicked item
+    var ourClass = $(this).attr('class');
+
+    // reset the active class on all the buttons
+    $('#categories li').removeClass('active');
+    // update the active state on our clicked button
+    $(this).parent().addClass('active');
+
+    if(ourClass == 'all') {
+      // show all our items
+      $('#ourHolder').children('div.item').show();
+    }
+    else {
+      // hide all elements that don't share ourClass
+      $('#ourHolder').children('div:not(.' + ourClass + ')').hide();
+      // show all elements that do share ourClass
+      $('#ourHolder').children('div.' + ourClass).show();
+    }
+    return false;
+  });
+});</script>
+</head>
+<body>
+    <ul id="categories">
+      <li class="active"><a href="#" class="all">All</a></li>
+      <li><a href="#" class="alien">Aliens and Contact</a></li>
+      <li><a href="#" class="ai">AI and Robots</a></li>
+      <li><a href="#" class="anth">Anthropological</a></li>
+      <li><a href="#" class="apocolypse">Apocolypse</a></li>
+      <li><a href="#" class="comic">Comic</a></li>
+      <li><a href="#" class="doom">Dying Earth</a></li>
+      <li><a href="#" class="explore">Exploration</a></li>
+      <li><a href="#" class="fantasy">Fantasy</a></li>
+      <li><a href="#" class="goth">Gothic</a></li>
+      <li><a href="#" class="hard">Hard</a></li>
+      <li><a href="#" class="military">Military</a></li>
+      <li><a href="#" class="mutant">Mutations/Evolution</a></li>
+      <li><a href="#" class="newwave">New Wave</a></li>
+      <li><a href="#" class="social">Social</a></li>
+      <li><a href="#" class="opera">Space Opera</a></li>
+      <li><a href="#" class="time">Time</a></li>
+      <li><a href="#" class="transrealism">Transrealism</a></li>
+    </ul>
+	<div id="ourHolder">
+    	<div class="item social">
+        	<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Ingsoc_logo_from_1984.svg/2000px-Ingsoc_logo_from_1984.svg.png" width="200px">
+      	</div>
+        <div class="item explore">
+        	<h3>2001: A Space Odyssey</h3>
+      	</div>
+        <div class="item explore">
+        <h3>20,000 Leagues Under the Sea</h3>
+      	</div>
+        <div class="item alien">
+        	<h3>Battlefield Earth</h3>
+      	</div>
+        <div class="item social">
+        	<h3>Brave New World</h3>
+      	</div>
+      <div class="item doom apocalypse dying comic">
+        <h3>A Canticle for Leibowitz</h3>
+      </div>
+      <div class="item doom apocalypse dying comic">
+        <h3>Cat's Cradle</h3>
+      </div>
+      <div class="item ai">
+        <h3>Caves of Steel</h3>
+      </div>
+      <div class="item alien">
+        <h3>Childhood's End</h3>
+      </div>
+       <div class="item ai">
+        <h3>The City </h3>
+      </div>
+      <div class="item dying">
+        <h3>The City and the Stars</h3>
+      </div>
+        <div class="item alien">
+          <h3> Contact</h3>
+        </div>
+        <div class="item alien">
+          <h3> The Chrysalids</h3>
+        </div>
+        <div class="item opera">
+          <h3>Culture Series</h3>
+        </div>
+        <div class="item ai">
+          <h3>The Cyberiad</h3>
+        </div>
+        <div class="item opera">
+          <h3> The Day of the Triffids</h3>
+        </div>        
+        <div class="item cyberpunk">
+        	<h3>The Diamond Age</h3>
+      	</div>
+        <div class="item anthro">
+        	<h3> The Dispossessed</h3>
+     	</div>
+      	<div class="item apocolypse ai">
+        	<h3>Do Androids Dream of Electric Sheep?</h3>
+      	</div>
+        <div class="item mutant">
+        	<h3>The Door into Summer</h3>
+      	</div>
+        <div class="item opera">
+        	<h3>Dune Series </h3>
+      	</div>
+        <div class="item time">
+        	<h3>The End of Eternity</h3>
+      	</div>
+        <div class="item opera alien">
+        	<h3>Ender's Game Series</h3>
+      	</div>
+        <div class="item social">
+        	<h3>Fahrenheit 451</h3>
+      	</div>
+        <div class="item mutant">
+        	<h3>The Forever War</h3>
+      	</div>   
+        <div class="item opera">
+        	<h3>The Foundation Trilogy</h3>
+      	</div>      
+        <div class="item goth">
+           <h3>Frankenstein</h3>
+        </div>
+        <div class="item alien">
+        	<h3> Gateway</h3>
+      	</div>
+        <div class="item apocolypse">
+          <h3>The Gods Themselves</h3>
+        </div>
+        <div class="item social">
+        <h3>The Handmaid's Tale</h3>
+        </div>
+        <div class="item comic">
+          <h3>Have Space-Suit - Will Travel</h3>
+        </div>
+        <div class="item comic apocalypse alien">
+          <h3>Hitch Hiker's Guide to the Galaxy</h3>
+        </div>
+        <div class="item opera alien">
+        	<h3>Hyperion Series</h3>
+     	</div>
+       	<div class="item goth apocolypse">
+          <h3>I am Legend</h3>
+        </div>
+        <div class="item ai">
+        	<h3>I, Robot</h3>
+      	</div>
+      	<div class="item alien">
+        	<h3>Ilium</h3>
+      	</div>      
+        <div class="item explore">
+          <h3>Journey to the Center of the Earth</h3>
+        </div>
+        <div class="item fantasy">
+          <h3>Jurassic Park</h3>
+        </div>
+        <div class="item time">
+        	<h3>The Lathe of Heaven</h3>
+      	</div>    
+        <div class="item anthro">
+          <h3>The Left Hand of Darkness</h3>
+        </div>
+        <div class="item newwave">
+        	<h3>Lord of Light</h3>
+      	</div>
+        <div class="item anthro">
+          <h3>Lucifer's Hammer</h3>
+        </div>
+        <div class="item transrealism newwave">
+        	<h3>The Man in the High Castle</h3>
+      	</div>
+      	<div class="item hard">
+        	<h3>The Martian</h3>
+      	</div>
+        <div class="item alien">
+          <h3>The Martian Chronicles</h3>
+        </div>
+        <div class="item mutant">
+          <h3>More Than Human</h3>
+        </div>
+      	<div class="item alien">
+        	<h3>The Mote in God's Eye</h3>
+      	</div>
+        <div class="item cyberpunk">
+          <h3>Neuromancer</h3>
+        </div>
+        <div class="item military">
+          <h3>Old Man's War</h3>
+        </div>
+        <div class="item alien">
+          <h3>Out of the Silent Planet</h3>
+        </div>
+         <div class="item apocolypse">
+          <h3>The Postman</h3>
+        </div>
+        <div class="item alien">
+          <h3>Princess of Mars</h3>
+        </div>
+        <div class="item opera">
+          <h3>The Reality Dysfunction</h3>
+        </div>
+        <div class="item alien">
+          <h3>Red Mars</h3>
+        </div>
+        <div class="item alien">
+          <h3>Rendezvous With Rama</h3>
+        </div>
+        <div class="item opera">
+          <h3>Revelation Space</h3>
+        </div>
+       	<div class="item explore">
+        	<h3>Ringworld</h3>
+      	</div>
+        <div class="item apocolypse">
+        	<h3>The Road</h3>
+      	</div>      
+      	<div class="item alien">
+       	 	<h3>Roadside Picnic</h3>
+      	</div>
+        <div class="item transrealism">
+          <h3>Scanner Darkly</h3>
+        </div>  
+        <div class="item comic alien">
+          <h3>The Sirens of Titan</h3>
+        </div>
+        <div class="item social">
+          <h3>Slaughterhouse Five</h3>
+        </div>
+        <div class="item cyberpunk">
+          <h3>Snow Crash</h3>
+        </div>
+        <div class="item fantasy">
+          <h3>The Solar Series</h3>
+        </div>
+        <div class="item mutant explore">
+          <h3>Solaris</h3>
+        </div>
+        <div class="item mutant">
+          	<h3>The Stars My Destination</h3>
+        </div> 
+        <div class="item military">
+          	<h3>Starship Troopers</h3>
+        </div>
+        <div class="item explore">
+          	<h3>Startide Rising [S2]</h3>
+        </div>
+        <div class="item goth anthro">
+         	 <h3>Strange Case of Dr Jekyll &amp; Mr Hyde</h3>
+        </div>
+        <div class="item anth alien social anthro">
+          	<h3>Stranger in a Strange Land</h3>
+        </div>
+      	<div class="item transrealism">
+        	<h3>The Three Stigmata of Palmer Eldritch</h3>
+      	</div>  
+      	<div class="item time">
+        	<h3>Time Enough For Love</h3>
+      	</div>           
+      	<div class="item mutant social dying">
+    	    <h3>The Time Machine</h3>
+	      </div>
+      	<div class="item newwave">
+       	 <h3>To Your Scattered Bodies Go</h3>
+      	</div> 
+      	<div class="item comic">
+        	<h3>Ubik</h3>
+      	</div>
+      	<div class="item military alien apocolypse">
+        	<h3>The War of the Worlds</h3>
+      	</div>
+        <div class="item alien">
+        	<h3>Way Station</h3>
+      	</div>
+      	<div class="item time">
+        	<h3>A Wrinkle In Time</h3>
+      	</div>      
+	</div>
+</body>
+</html>
