@@ -1,9 +1,11 @@
 @charset "UTF-8";
 /* CSS Document */
 $standard: 20px;
-$text-color: white;
-$background: grey;
+$text-color: black;
+$key-color: #40e0d0;
+$background: #999;
 $icon-size:30px;
+$trans-white:rgba(255,255,255,0.8);
 @mixin transition($time) {
   -webkit-transition: $time ease-in-out;
   -moz-transition: $time ease-in-out;
@@ -24,9 +26,8 @@ body {
 }
 h1 {
   font-size: 72px;
-  font-weight: lighter;
   text-transform: uppercase;
-  color: $background;
+  color: $key-color;
 }
 h2 {
 	font-weight: lighter;
@@ -39,6 +40,22 @@ h3 {
 a {
 	text-decoration: none;
 }
+button {
+  border:black  3px solid;
+  padding: 10px;
+  margin: auto;
+  display: block;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $text-color;
+  background: $background;
+  @include transition (.5s);
+  &:hover {
+    border-color: $key-color;
+    color: $key-color;
+    background: black;
+  }
+}
 /* nav */
 nav {
 	position:fixed;
@@ -47,11 +64,7 @@ nav {
   z-index: 1000;
 	a {
 		margin:$standard;
-		color: $text-color;
-    &:hover {
-      color: black;
-      font-weight: bold;
-    }
+		color: white;
 	}
 	ul {
 		position: fixed;
@@ -60,6 +73,13 @@ nav {
 		list-style: none;
 		li {
 			margin-bottom:30px;
+      a {
+        color: $text-color;
+        @include transition (.5s);
+        &:hover {
+          color: $key-color;
+        }
+      }
 			img {
 			    height: $icon-size;
 			}
@@ -100,7 +120,7 @@ nav {
 #triangle-menu{
 	position: fixed;
 	top:0;
-	right:0;
+	right:-1px;
   border-left: 200px solid transparent;
   border-right: 0px solid transparent;
   border-top: 90px solid $background;
@@ -133,22 +153,24 @@ nav ul.open-menu{
 section {
 	position: relative;
   top:50px;
+  background: white;
 }
 /* slider */
 #slider {
   width: 100%;
-  height: 900px;
+  height: 800px;
   overflow: hidden;
 	padding: 40px 0;
   position: relative;
   width: 100%;
+  z-index: 1;
   ul {
     list-style: none;
     margin: 0;
     padding: 0;
     li {
       width: 100%;
-      height: 1200px;
+      height: 800px;
       position: absolute;
       top: 0;
       overflow: hidden;
@@ -158,7 +180,7 @@ section {
       	width: 100%;
       }
       #box {
-        background: rgba(255,255,255,0.8);
+        background:$trans-white;
         position: absolute;
         z-index: 10;
         top: 100px;
@@ -185,7 +207,7 @@ section {
     margin: $standard;
     width: 21%;
     display: inline-block;
-    background: black;
+    background:black;
     height: 300px;
     overflow: hidden;
     h1 {
@@ -193,7 +215,8 @@ section {
       position: absolute;
       top:50%;
       width: 100%;
-      color: $text-color;
+      color: $key-color;
+      font-size: 32px;
     }
     img {
       position: relative;
@@ -221,7 +244,7 @@ section {
 }
 /* footer */
 footer {
-  background: grey;
+  background: $background;
   text-align: center;
   img {
     height: $icon-size;
@@ -239,11 +262,33 @@ footer {
     font-size: 30px;
   }
 }
+
 /* tablet */
 @media only screen and (max-width: 768px) {
-
   #slider {
     height: 420px;
+    ul{
+      li{
+      height: 500px;
+        #box {
+          top:60px;
+          max-width: 700px;
+          padding:50px;
+        }
+      }
+    }
+  }
+  #portfolio{
+    #project {
+      width: 44%;
+      background: $trans-white;
+      h1{
+        z-index: 100;
+      }
+      img{
+        opacity: .3;
+      }
+    }
   }
   footer {
     margin-top: 100px;
@@ -284,12 +329,6 @@ footer {
       margin: 10px;
       display: block;
       width: auto;
-      h1{
-        z-index: 100;
-      }
-      img{
-        opacity: .4;
-      }
     }
   }
   #img-col {

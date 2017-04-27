@@ -2,7 +2,6 @@
 var menuIcon = document.getElementById("menu-icon");
 menuIcon.addEventListener("click", determinesState);
 function determinesState () {
-  console.log('working')
   this.classList.toggle('open');
   var dropdown = document.getElementById("dropdown")
   var triangle = document.getElementById("triangle-menu")
